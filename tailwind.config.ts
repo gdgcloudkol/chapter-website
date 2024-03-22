@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -16,9 +16,15 @@ const config = {
       screens: {
         "2xl": "1400px",
       },
+
     },
+
     extend: {
       colors: {
+        googleBlue: "hsl(var(--googleBlue))",
+        googleRed: "hsl(var(--googleRed))",
+        googleYellow: "hsl(var(--googleYellow))",
+        googleGreen: "hsl(var(--googleGreen))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

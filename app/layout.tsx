@@ -5,11 +5,11 @@ import "./globals.css";
 const googleSans = localFont({
   src: [
     {
-      path: '../public/fonts/GoogleSans-Regular_0.ttf',
+      path: '../public/assets/fonts/GoogleSans-Regular_0.ttf',
       weight: '400'
     },
     {
-      path: '../public/fonts/GoogleSans-Bold-v1.27.ttf',
+      path: '../public/assets/fonts/GoogleSans-Bold-v1.27.ttf',
       weight: '700'
     }
   ],
