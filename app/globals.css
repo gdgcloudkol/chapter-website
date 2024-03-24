@@ -33,6 +33,11 @@
     --ring: 0 0% 3.9%;
  
     --radius: 0.5rem;
+
+    --google-red: 5, 81%, 56%;
+    --google-green: 136, 53%, 43%;
+    --google-blue: 217, 89%, 61%;
+    --google-yellow: 45, 97%, 50%;
   }
  
   .dark {
@@ -63,6 +68,11 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+
+    --google-red: 5, 81%, 56%;
+    --google-green: 136, 53%, 43%;
+    --google-blue: 217, 89%, 61%;
+    --google-yellow: 45, 97%, 50%;
   }
 }
  

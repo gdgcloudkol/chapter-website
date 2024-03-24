@@ -1,0 +1,21 @@
+{
+  "logo": "LOGO",
+  "sections": [
+    {
+      "title": "About",
+      "link": "#about"
+    },
+    {
+      "title": "Events",
+      "link": "#events"
+    },
+    {
+      "title": "Gallery",
+      "link": "#gallery"
+    },
+    {
+      "title": "Contact",
+      "link": "#contact"
+    }
+  ]
+}

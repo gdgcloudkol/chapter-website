@@ -1,6 +1,11 @@
+import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <h1 className="text-4xl">Coming soon</h1>
+    <>
+      <Navbar />
+      <Header />
+    </>
   );
 }
