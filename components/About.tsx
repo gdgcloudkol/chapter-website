@@ -1,5 +1,4 @@
 
-import React from 'react'
 import SectionHeader from './blocks/SectionHeader'
 import AboutData from '../public/assets/content/about/content.json';
 import LazyImage from './blocks/LazyImage';
