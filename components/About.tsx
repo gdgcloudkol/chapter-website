@@ -30,7 +30,6 @@ export default function About() {
     return (
         <section className='flex flex-col w-full max-w-6xl mx-auto gap-6 p-4'>
             <SectionHeader title1={AboutData.title_1} title_color={AboutData.title_color} title3={AboutData.title_3} description={AboutData.description} color={AboutData.color} />
-
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-x-10 gap-y-4">
                 {AboutData.images.map(image => <ImageDiv image={image} key={image.id} />)}
             </div>

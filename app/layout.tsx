@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const googleSans = localFont({
   src: [
@@ -32,6 +33,7 @@ export default function RootLayout({
         <main className="flex flex-col items-start justify-start w-full max-w-screen-2xl mx-auto">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
