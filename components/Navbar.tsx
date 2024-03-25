@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import NavbarData from "@/public/assets/content/navbar/navbar.json";
 
 function Navbar() {
@@ -10,12 +12,38 @@ function Navbar() {
   return (
     <div className="w-full h-20 pb-2 px-8 flex items-center gap-10 bg-google-blue text-white">
       <div className="w-full md:w-auto flex justify-between items-center">
-        <h2 className="font-bold text-lg">{NavbarData.logo}</h2>
+        <Image
+          src={NavbarData.logo}
+          alt="logo"
+          height={60}
+          width={60}
+          className="bg-blend-screen"
+        />
         <div
           onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 z-20 text-white md:hidden"
+          className="cursor-pointer z-20 md:hidden mr-8"
         >
-          {nav ? "close" : "open"}
+          <span
+            aria-hidden="true"
+            className={cn(
+              "block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out",
+              nav ? "rotate-45" : "-translate-y-1.5"
+            )}
+          ></span>
+          <span
+            aria-hidden="true"
+            className={cn(
+              "block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out",
+              nav ? "opacity-0" : ""
+            )}
+          ></span>
+          <span
+            aria-hidden="true"
+            className={cn(
+              "block absolute h-0.5 w-7 bg-white transform transition duration-500 ease-in-out",
+              nav ? "-rotate-45" : "translate-y-1.5"
+            )}
+          ></span>
         </div>
       </div>
 

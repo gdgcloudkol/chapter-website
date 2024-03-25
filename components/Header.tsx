@@ -1,6 +1,8 @@
 import Image from "next/image";
 import background from "@/public/assets/images/map.png";
 import HeaderData from "@/public/assets/content/header/header.json";
+import SocialData from "@/public/assets/content/socials.json";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -21,6 +23,20 @@ function Header() {
           <h3 className="text-3xl md:text-4xl py-4">
             {HeaderData.isCloud ? "Cloud •" : ""} {HeaderData.chapterName}
           </h3>
+          {HeaderData.hasSocials && (
+            <div className="flex items-center gap-4 pt-2">
+              {SocialData.map((each) => (
+                <Link href={each.hyperlink} key={each.title} target="_blank">
+                  <Image
+                    src={each.imgSrc}
+                    width={40}
+                    height={40}
+                    alt={each.title}
+                  />
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>

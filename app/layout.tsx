@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${googleSans.className}`}>
-        <main className="flex flex-col items-start justify-start w-full max-w-screen-2xl mx-auto">
+        <main className="flex flex-col items-start justify-start w-full mx-auto">
           {children}
         </main>
       </body>
