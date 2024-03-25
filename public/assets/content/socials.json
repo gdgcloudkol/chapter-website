@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Facebook",
+    "hyperlink": "https://facebook.com/gdgcloudkol",
+    "imgSrc": "./assets/icons/facebook.svg"
+  },
+  {
+    "title": "Twitter",
+    "hyperlink": "https://twitter.com/gdgcloudkol",
+    "imgSrc": "./assets/icons/twitter.svg"
+  },
+  {
+    "title": "linkedIn",
+    "hyperlink": "https://www.linkedin.com/company/gdgcloudkol",
+    "imgSrc": "./assets/icons/linkedin.svg"
+  },
+  {
+    "title": "Instagram",
+    "hyperlink": "https://instagram.com/gdgcloudkol",
+    "imgSrc": "./assets/icons/instagram.svg"
+  }
+]
