@@ -1,4 +1,4 @@
-import { ISectionPropsTypes } from "@/public/assets/types/datatype.props";
+import { ISectionPropsTypes } from "@/components/models/datatype.props";
 
 export default function SectionHeader({ title1, title_color, title3, description, color }: ISectionPropsTypes) {
     const TextColorMap: { [key: string]: string } = {

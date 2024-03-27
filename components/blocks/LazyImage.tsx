@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { ILazyImgPropsTypes } from '@/public/assets/types/datatype.props'
+import { ILazyImgPropsTypes } from '@/components/models/datatype.props'
 
 const LazyImage = ({
     src,

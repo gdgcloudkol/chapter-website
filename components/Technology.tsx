@@ -8,19 +8,19 @@ import { ArrowLeft, ArrowRight } from "./blocks/SliderArrows";
 import { useEffect, useState } from "react";
 
 export default function Technology() {
-    const [slidesToShow, setSlidesToShow] = useState(3); // Default value for desktop
+    const [slidesToShow, setSlidesToShow] = useState(4); // Default value for desktop
+
+    const handleResize = () => {
+        if (window.innerWidth <= 550) { // Mobile or smaller screens
+            setSlidesToShow(1);
+        } else if (window.innerWidth <= 850) { // Tablet screens
+            setSlidesToShow(2);
+        } else { // Desktop screens
+            setSlidesToShow(4);
+        }
+    };
 
     useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 550) { // Mobile or smaller screens
-                setSlidesToShow(1);
-            } else if (window.innerWidth <= 850) { // Tablet screens
-                setSlidesToShow(2);
-            } else { // Desktop screens
-                setSlidesToShow(4);
-            }
-        };
-
         window.addEventListener('resize', handleResize);
 
         handleResize();
@@ -48,8 +48,11 @@ export default function Technology() {
             <Slider {...settings} >
                 {TechData.images.map(image => {
                     return (
-                        <div key={image.id} className="px-6">
-                            <LazyImage lazy={false} src={image.src} alt={image.alt} blurred={image.blurUrl} className="border border-gray rounded-lg" />
+                        <div key={image.id} className="px-6 ">
+                            <div className="border-2 py-2 border-l-googleYellow border-r-googleBlue border-t-googleRed border-b-googleGreen rounded-lg">
+                                <LazyImage lazy={false} src={image.src} alt={image.alt} className=" items-center justify-center px-3" />
+                                <h4 className="text-2xl text-center font-extrabold">{image.title}</h4>
+                            </div>
                         </div>
                     )
                 })}
