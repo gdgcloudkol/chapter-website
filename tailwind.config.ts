@@ -59,6 +59,9 @@ const config = {
           green: "hsl(var(--google-green))",
           blue: "hsl(var(--google-blue))",
           yellow: "hsl(var(--google-yellow))",
+          grey: "#676c7",
+          darkGrey: "#404040",
+          LightGrey: "#f9f9f9",
         }
       },
       borderRadius: {

@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Navbar from "@/components/Navbar";
 
 const googleSans = localFont({
   src: [
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${googleSans.className}`}>
+        <Navbar />
         <main className="flex flex-col items-start justify-start w-full mx-auto">
           {children}
         </main>

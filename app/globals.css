@@ -97,3 +97,7 @@
 .slick-slider{
   display: flex !important;
 }
+
+.container{
+  @apply w-full max-w-6xl mx-auto
+}

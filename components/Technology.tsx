@@ -43,7 +43,7 @@ export default function Technology() {
         className: " items-center justify-center "
     };
     return (
-        <section className="flex flex-col w-full max-w-6xl mx-auto gap-6 p-4">
+        <section className="flex flex-col w-full container gap-6 p-4">
             <SectionHeader title1={TechData.title_1} title_color={TechData.title_color} title3={TechData.title_3} description={TechData.description} color={TechData.color} />
             <Slider {...settings} >
                 {TechData.images.map(image => {
