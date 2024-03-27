@@ -49,7 +49,7 @@ export default function Technology() {
                 {TechData.images.map(image => {
                     return (
                         <div key={image.id} className="px-6 ">
-                            <div className="border-2 py-2 border-l-googleYellow border-r-googleBlue border-t-googleRed border-b-googleGreen rounded-lg">
+                            <div className="border-2 py-2 border-l-google-yellow border-r-google-blue border-t-google-red border-b-google-green rounded-lg">
                                 <LazyImage lazy={false} src={image.src} alt={image.alt} className=" items-center justify-center px-3" />
                                 <h4 className="text-2xl text-center font-extrabold">{image.title}</h4>
                             </div>

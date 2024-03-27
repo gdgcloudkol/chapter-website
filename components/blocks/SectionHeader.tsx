@@ -2,10 +2,10 @@ import { ISectionPropsTypes } from "@/components/models/datatype.props";
 
 export default function SectionHeader({ title1, title_color, title3, description, color }: ISectionPropsTypes) {
     const TextColorMap: { [key: string]: string } = {
-        googleBlue: 'text-googleBlue',
-        googleRed: 'text-googleRed',
-        googleYellow: 'text-googleYellow',
-        googleGreen: 'text-googleGreen',
+        googleBlue: 'text-google-blue',
+        googleRed: 'text-google-red',
+        googleYellow: 'text-google-yellow',
+        googleGreen: 'text-google-green',
     };
     const colorClass = TextColorMap[color] || '';
     return (

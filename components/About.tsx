@@ -5,10 +5,10 @@ import LazyImage from './blocks/LazyImage';
 import { bgColorMap, cn, textColorMap } from '@/lib/utils';
 
 const BgColorMap: { [key: string]: string } = {
-    googleBlue: 'bg-googleBlue',
-    googleRed: 'bg-googleRed',
-    googleYellow: 'bg-googleYellow',
-    googleGreen: 'bg-googleGreen',
+    googleBlue: 'bg-google-blue',
+    googleRed: 'bg-google-red',
+    googleYellow: 'bg-google-yellow',
+    googleGreen: 'bg-google-green',
 };
 
 const ImageDiv = ({ image }: { image: any }) => {

@@ -21,10 +21,6 @@ const config = {
 
     extend: {
       colors: {
-        googleBlue: "hsl(var(--googleBlue))",
-        googleRed: "hsl(var(--googleRed))",
-        googleYellow: "hsl(var(--googleYellow))",
-        googleGreen: "hsl(var(--googleGreen))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -58,6 +54,12 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        google: {
+          red: "hsl(var(--google-red))",
+          green: "hsl(var(--google-green))",
+          blue: "hsl(var(--google-blue))",
+          yellow: "hsl(var(--google-yellow))",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
