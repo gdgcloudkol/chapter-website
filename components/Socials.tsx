@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 export default function Socials() {
     return (
-        <section className="flex flex-col w-full container gap-6 p-4">
+        <section className="flex flex-col w-full local-container gap-6 p-4" id='contact'>
             <SectionHeader title1={SocialData.title_1} title_color={SocialData.title_color} color={SocialData.color} description={SocialData.description} />
             <div className="flex flex-wrap items-center gap-x-4 mx-auto">
 

@@ -3,6 +3,7 @@ import background from "@/public/assets/images/map.png";
 import HeaderData from "@/public/assets/content/header/header.json";
 import SocialData from "@/public/assets/content/social/content.json";
 import Link from "next/link";
+import HeaderTags from "./blocks/HeaderTags";
 
 function Header() {
   return (
@@ -17,7 +18,7 @@ function Header() {
             priority={true}
           />
         </div>
-        {/* <div className="w-full h-full bg-gray-500 opacity-70"></div> */}
+        <HeaderTags />
         <div className="absolute top-0 h-full w-full p-6 flex flex-col md:items-center justify-center text-white bg-gray-800/60">
           <h1 className="text-6xl">{HeaderData.header}</h1>
           <h3 className="text-3xl md:text-4xl py-4">
