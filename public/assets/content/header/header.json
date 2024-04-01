@@ -17,6 +17,6 @@
         { "tag": "Collaborate", "variant": "base" },
         { "tag": "TechEvents", "variant": "base" },
         { "tag": "Hackathons", "variant": "small" },
-        { "tag": "Cloud Community Days", "variant": "base" }
+        { "tag": "CloudCommunityDays", "variant": "base" }
     ]
 }

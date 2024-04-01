@@ -1,6 +1,8 @@
 import Header from '@/components/Header'
 import SectionHeader from '@/components/blocks/SectionHeader'
 import COC from '@/public/assets/content/coc/content.json'
+import Socials from "@/components/Socials";
+import Footer from "@/components/Footer";
 
 function ContentBlock({ title, description }: { title: string, description: string }) {
     return <div className='flex flex-col'>
@@ -22,6 +24,8 @@ export default function page() {
                     })
                 }
             </section>
+            <Socials />
+            <Footer />
         </section>
     )
 }
