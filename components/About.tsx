@@ -1,11 +1,10 @@
 
-import SectionHeader from './blocks/SectionHeader'
+import { Button } from "@/components/ui/button";
+import { cn } from '@/lib/utils';
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import AboutData from '../public/assets/content/about/content.json';
 import LazyImage from './blocks/LazyImage';
-import { bgColorMap, cn, textColorMap } from '@/lib/utils';
-import {Button} from "@/components/ui/button";
-import {ArrowRight, Users} from "lucide-react";
-import Link from "next/link";
 
 const BgColorMap: { [key: string]: string } = {
     googleBlue: 'bg-google-blue',
@@ -32,12 +31,12 @@ const WideImageDiv = ({ image }: { image: any }) => {
                 </Link>
             </div>
             <LazyImage alt={image.alt} minHeight={200} src={image.src} blurred={image.blurUrl}
-                       className='rounded-lg border'/>
+                className='rounded-lg border' />
         </div>
     )
 }
 
-const ImageDiv = ({image}: { image: any }) => {
+const ImageDiv = ({ image }: { image: any }) => {
     const colorClass = BgColorMap[image.color] || '';
     return <div key={image.id} className='mt-16 flex flex-col gap-y-2 w-auto mx-auto'>
         <div className="relative space-y-1">
@@ -48,14 +47,14 @@ const ImageDiv = ({image}: { image: any }) => {
             <h6 className={"text-base w-full"}>{image.description}</h6>
         </div>
         <LazyImage alt={image.alt} minHeight={200} src={image.src} blurred={image.blurUrl}
-                   className='rounded-lg border'/>
+            className='rounded-lg border' />
     </div>
 }
 
 export default function About() {
     return (
         <section className='flex flex-col w-full local-container gap-6 p-4' id='about'>
-            <WideImageDiv image={AboutData.images[0]}/>
+            <WideImageDiv image={AboutData.images[0]} />
             <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-x-10 gap-y-4">
                 {AboutData.images.slice(1).map(image => <ImageDiv image={image} key={image.id} />)}
             </div>

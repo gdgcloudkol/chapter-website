@@ -5,8 +5,8 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import NavbarData from "@/public/assets/content/navbar/content.json";
 import { usePathname } from "next/navigation";
-import {Button} from "@/components/ui/button";
-import {X, Grip} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { X, Grip } from "lucide-react";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -24,21 +24,21 @@ function Navbar() {
             className="bg-blend-screen brightness-0 invert"
           />
           </Link>
-            <div
-              className="cursor-pointer z-30 md:hidden"
-            >
-              {
-                nav ? (
-                    <Button  className={"hover:bg-blue-400 hover:text-white"} variant={"ghost"} onClick={() => setNav(!nav)}>
-                        <X className={"h-6 w-6"} />
-                    </Button>
-                ) : (
-                    <Button className={"hover:bg-blue-400 hover:text-white"} onClick={() => setNav(!nav)} variant={"ghost"} >
-                        <Grip className={"h-6 w-6"} />
-                    </Button>
-                )
-              }
-            </div>
+          <div
+            className="cursor-pointer z-30 md:hidden"
+          >
+            {
+              nav ? (
+                <Button className={"hover:bg-blue-400 hover:text-white"} variant={"ghost"} onClick={() => setNav(!nav)}>
+                  <X className={"h-6 w-6"} />
+                </Button>
+              ) : (
+                <Button className={"hover:bg-blue-400 hover:text-white"} onClick={() => setNav(!nav)} variant={"ghost"} >
+                  <Grip className={"h-6 w-6"} />
+                </Button>
+              )
+            }
+          </div>
         </div>
 
         <ul className="h-full hidden md:flex items-center gap-4">
