@@ -33,7 +33,7 @@ export default function HeaderTags() {
     }, []);
 
     return (
-        <section className="md:w-1/2 w-full max-w-md text-black absolute left-0 top-0 z-10  gap-2 items-center max-h-full overflow-y-hidden">
+        <section className="md:visible invisible md:w-1/2 w-full max-w-md text-black absolute left-0 top-0 z-10  gap-2 items-center max-h-full overflow-y-hidden">
             {HeaderTagsContent.tags.map((tag, idx) => (
                 <h3
                     key={idx}
