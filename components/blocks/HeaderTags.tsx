@@ -29,7 +29,7 @@ export default function HeaderTags() {
         };
 
         addRemoveClasses();
-        return () => clearTimeout();
+        return () => clearTimeout(1);
     }, []);
 
     return (
