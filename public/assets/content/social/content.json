@@ -1,0 +1,31 @@
+{
+  "title_1":"Stay",
+  "title_color":"Connected",
+  "color":"googleGreen",
+  "description":"Follow #gdgcloudkol for updates, recaps, and news.",
+  "socials":[
+  {
+    "title": "Facebook",
+    "hyperlink": "https://facebook.com/gdgcloudkol",
+    "imgSrc": "./assets/icons/facebook.svg",
+    "imgDarkSrc": "./assets/icons/facebook-dark.svg"
+  },
+  {
+    "title": "Twitter",
+    "hyperlink": "https://twitter.com/gdgcloudkol",
+    "imgSrc": "./assets/icons/twitter.svg",
+    "imgDarkSrc": "./assets/icons/twitter-dark.svg"
+  },
+  {
+    "title": "linkedIn",
+    "hyperlink": "https://www.linkedin.com/company/gdgcloudkol",
+    "imgSrc": "./assets/icons/linkedin.svg",
+    "imgDarkSrc": "./assets/icons/linkedin-dark.svg"
+  },
+  {
+    "title": "Instagram",
+    "hyperlink": "https://instagram.com/gdgcloudkol",
+    "imgSrc": "./assets/icons/instagram.svg",
+    "imgDarkSrc": "./assets/icons/instagram-dark.svg"
+  }
+]}

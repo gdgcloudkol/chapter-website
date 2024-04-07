@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Navbar from "@/components/Navbar";
 
 const googleSans = localFont({
   src: [
     {
-      path: '../public/fonts/GoogleSans-Regular_0.ttf',
+      path: '../public/assets/fonts/GoogleSans-Regular_0.ttf',
       weight: '400'
     },
     {
-      path: '../public/fonts/GoogleSans-Bold-v1.27.ttf',
+      path: '../public/assets/fonts/GoogleSans-Bold-v1.27.ttf',
       weight: '700'
     }
   ],
@@ -29,7 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${googleSans.className}`}>
-        <main className="flex flex-col items-start justify-start w-full max-w-screen-2xl mx-auto">
+        <Navbar />
+        <main className="flex flex-col items-start justify-start w-full mx-auto">
           {children}
         </main>
       </body>

@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -16,7 +16,9 @@ const config = {
       screens: {
         "2xl": "1400px",
       },
+
     },
+
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -52,6 +54,15 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        google: {
+          red: "hsl(var(--google-red))",
+          green: "hsl(var(--google-green))",
+          blue: "hsl(var(--google-blue))",
+          yellow: "hsl(var(--google-yellow))",
+          grey: "#676c7",
+          darkGrey: "#404040",
+          white: "#f9f9f9",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

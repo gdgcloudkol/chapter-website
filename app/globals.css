@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
  
 @layer base {
   :root {
@@ -33,6 +38,11 @@
     --ring: 0 0% 3.9%;
  
     --radius: 0.5rem;
+    
+    --google-red: 5, 81%, 56%;
+    --google-green: 136, 53%, 43%;
+    --google-blue: 217, 89%, 61%;
+    --google-yellow: 45, 97%, 50%;
   }
  
   .dark {
@@ -63,6 +73,11 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+    
+    --google-red: 5, 81%, 56%;
+    --google-green: 136, 53%, 43%;
+    --google-blue: 217, 89%, 61%;
+    --google-yellow: 45, 97%, 50%;
   }
 }
  
@@ -73,4 +88,36 @@
   body {
     @apply bg-background text-foreground;
   }
+  html{
+    @apply scroll-smooth;
+  }
+}
+
+/* @layer components{
+  .arrow{
+    @apply flex;
+  }
+} */
+
+.slick-arrow, .slick-prev::before,.slick-next::before{
+  display:none !important;
+}
+.slick-slider{
+  display: flex !important;
+}
+
+.local-container{
+  @apply w-full max-w-6xl mx-auto
+}
+
+
+.dotted-bg {
+  --dot-bg: #161616;
+  --dot-color: #848282;
+  --dot-size: 1px;
+  --dot-space: 50px;
+  background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
 }
