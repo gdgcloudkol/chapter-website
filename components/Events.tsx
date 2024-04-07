@@ -96,7 +96,7 @@ export default function Events() {
                         {showMoreEvents.map((data: Record<typeof bevyCall.fields[number], string>, key) => {
                             return (
                                 <div key={key} className="p-2">
-                                    <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title.substring(0, 30)} description={data.description.replace(/<\/?[^>]+>/g, '').replace(/'RSVP.*'/, '').substring(0, 300) + "..."} />
+                                    <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/<\/?[^>]+>/g, '').replace(/'RSVP.*'/, '').substring(0, 300) + "..."} />
                                 </div>
                             )
                         })}
