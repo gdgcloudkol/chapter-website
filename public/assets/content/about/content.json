@@ -7,7 +7,7 @@
     "images": [
         {
             "id": 1,
-            "src": "./assets/images/learn-cropped2.png",
+            "src": "./assets/images/about-title.png",
             "alt": "image of people attending and learning ",
             "title": "Who we are",
             "description": "GDG Cloud Kolkata is a place for cloud developers and architects to come together to learn discuss and explore the latest advances in cloud technologies.",
@@ -16,7 +16,7 @@
         },
         {
             "id": 2,
-            "src": "./assets/images/learn2.jpg",
+            "src": "./assets/images/learn.jpg",
             "alt": "image of people attending and learning ",
             "title": "Learn",
             "description": "Meet like-minded people and form lasting friendships",
@@ -25,7 +25,7 @@
         },
         {
             "id": 3,
-            "src": "./assets/images/connect2.jpg",
+            "src": "./assets/images/connect.jpg",
             "alt": "image of people connecting over ideas ",
             "title": "Connect",
             "description": "Share your journey and connect with experts",
@@ -34,7 +34,7 @@
         },
         {
             "id": 4,
-            "src": "./assets/images/inspire2.jpg",
+            "src": "./assets/images/inspire.jpg",
             "alt": "image of people connecting over ideas ",
             "title": "Inspire",
             "description": "Inspire people around you and build strong network",
@@ -43,7 +43,7 @@
         },
         {
             "id": 5,
-            "src": "./assets/images/innovate2.jpg",
+            "src": "./assets/images/innovate.jpg",
             "alt": "image of people connecting over ideas ",
             "title": "Innovate",
             "description": "Build for a sustainable future and make the world better",
