@@ -8,6 +8,7 @@ export interface ISectionPropsTypes {
 
 export interface ILazyImgPropsTypes {
     src: string;
+    height?: string;
     blurred?: string;
     alt: string;
     width?: number;

@@ -8,7 +8,8 @@ const LazyImage = ({
     width,
     minHeight,
     className,
-    lazy = true
+    height = 'auto',
+    lazy = true,
 }: ILazyImgPropsTypes) => {
     return (
         <div
@@ -26,8 +27,8 @@ const LazyImage = ({
                     position: 'relative',
                     zIndex: 1,
                     width: '100%',
-                    height: 'auto',
-                    objectFit: 'cover'
+                    height: height,
+                    objectFit: 'contain'
                 }}
             />
         </div>

@@ -10,15 +10,11 @@
             "link": "/#events"
         },
         {
-            "title": "Gallery",
-            "link": "/#gallery"
-        },
-        {
             "title": "Contact",
             "link": "/#contact"
         },
         {
-            "title": "Code of conduct",
+            "title": "Code of Conduct",
             "link": "/code-of-conduct"
         }
     ]
