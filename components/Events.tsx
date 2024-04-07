@@ -130,7 +130,7 @@ export default function Events() {
 }
 
 function EventCard({ eventData, imageUrl, title, description }: any) {
-    return <div className="border border-gray-400 rounded-lg h-96 flex flex-col flex-1 lg:w-72">
+    return <div className="w-full border border-gray-400 rounded-lg h-96 flex flex-col flex-1">
         <LazyImage height="100px" lazy={true} src={imageUrl} alt={""} className="relative flex items-center px-1 justify-center rounded-t-lg border-b" />
         <div className="flex flex-col items-start flex-1 px-4 justify-between py-2 gap-y-3">
             <h4 className="text-left font-medium text-google-blue">{title}</h4>
