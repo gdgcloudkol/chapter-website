@@ -1,0 +1,21 @@
+{
+    "logo": "/assets/images/Navlogo.png",
+    "sections": [
+        {
+            "title": "About",
+            "link": "/#about"
+        },
+        {
+            "title": "Events",
+            "link": "/#events"
+        },
+        {
+            "title": "Contact",
+            "link": "/#contact"
+        },
+        {
+            "title": "Code of Conduct",
+            "link": "/code-of-conduct"
+        }
+    ]
+}

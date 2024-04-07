@@ -1,0 +1,78 @@
+{
+    "header": "Google Developers Group",
+    "chapterName": "Kolkata",
+    "isCloud": true,
+    "hasSocials": true,
+    "tags": [
+        {
+            "tag": "GoogleForDevelopers",
+            "variant": "base",
+            "show": ""
+        },
+        {
+            "tag": "KolkataDevs",
+            "variant": "large",
+            "show": ""
+        },
+        {
+            "tag": "Learn",
+            "variant": "base",
+            "show": ""
+        },
+        {
+            "tag": "Network",
+            "variant": "base",
+            "show": ""
+        },
+        {
+            "tag": "CloudKolkata",
+            "variant": "x-large",
+            "show": ""
+        },
+        {
+            "tag": "Devs",
+            "variant": "base",
+            "show": ""
+        },
+        {
+            "tag": "Inspire",
+            "variant": "large",
+            "show": ""
+        },
+        {
+            "tag": "Connect",
+            "variant": "small",
+            "show": ""
+        },
+        {
+            "tag": "Grow",
+            "variant": "small",
+            "show": ""
+        },
+        {
+            "tag": "Innovate",
+            "variant": "small",
+            "show": ""
+        },
+        {
+            "tag": "Collaborate",
+            "variant": "base",
+            "show": ""
+        },
+        {
+            "tag": "TechEvents",
+            "variant": "base",
+            "show": ""
+        },
+        {
+            "tag": "Hackathons",
+            "variant": "small",
+            "show": ""
+        },
+        {
+            "tag": "CloudCommunityDays",
+            "variant": "base",
+            "show": ""
+        }
+    ]
+}
