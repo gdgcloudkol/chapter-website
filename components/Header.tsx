@@ -1,6 +1,6 @@
 import Image from "next/image";
 import background from "@/public/assets/images/map3.png";
-import HeaderData from "@/public/assets/content/header/header.json";
+import HeaderData from "@/public/assets/content/header/content.json";
 import SocialData from "@/public/assets/content/social/content.json";
 import Link from "next/link";
 import HeaderTags from "./blocks/HeaderTags";
