@@ -29,7 +29,7 @@ function Header() {
               {SocialData.socials.map((each) => (
                 <Link href={each.hyperlink} key={each.title} target="_blank">
                   <Image
-                    src={each.imgSrc}
+                    src={each.imgDarkSrc}
                     width={40}
                     height={40}
                     alt={each.title}
