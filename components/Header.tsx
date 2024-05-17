@@ -4,6 +4,7 @@ import HeaderData from "@/public/assets/content/header/content.json";
 import SocialData from "@/public/assets/content/social/content.json";
 import Link from "next/link";
 import HeaderTags from "./blocks/HeaderTags";
+import HeaderAnnounement from "./blocks/HeaderAnnounement";
 
 function Header() {
   return (
@@ -20,6 +21,7 @@ function Header() {
         </div>
         <HeaderTags />
         <div className="absolute top-0 h-full w-full p-6 flex flex-col md:items-center justify-center text-black">
+          <HeaderAnnounement />
           <h1 className="text-6xl">{HeaderData.header}</h1>
           <h3 className="text-3xl md:text-4xl py-4">
             <span className={"text-google-blue"}>{HeaderData.isCloud ? "Cloud •" : ""}</span> {HeaderData.chapterName}
