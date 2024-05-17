@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 function HeaderAnnounement() {
-    const [eventTitle, setEventTitle] = useState<String>('');
-    const [eventURL, setEventURL] = useState<String>('');
+    const [eventTitle, setEventTitle] = useState<string>('');
+    const [eventURL, setEventURL] = useState<string>('');
 
     let upcomingEventModel: BevyModel = {
         chapterId: 311,
@@ -34,7 +34,7 @@ function HeaderAnnounement() {
                 <button className="animate-border inline-block rounded-full bg-white bg-gradient-to-r from-google-blue  via-white to-google-blue bg-[length:400%_400%] p-[2px] mb-6 shadow-2xl z-30">
                     <Link href={eventURL} target='_blank'>
                         <span className="block rounded-full bg-white text-google-blue md:px-6 px-2 py-2 font-medium md:text-base text-xs">
-                            {eventTitle}
+                            <p dangerouslySetInnerHTML={{ __html: eventTitle }}></p>
                         </span>
                     </Link>
                 </button>
