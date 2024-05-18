@@ -11,6 +11,7 @@ import Modal from "./blocks/Modal";
 
 export default function Events() {
     const [eventResult, setEventsResult] = useState<any[]>([])
+    const [upcomingEvent, setUpcomingEventsResult] = useState<any[]>([])
     const [showMoreToggle, setShowMoreToggle] = useState<boolean>(false)
     const [showMoreEvents, setShowMoreEvents] = useState<any[]>([])
     const [slidesToShow, setSlidesToShow] = useState(3); // Default value for desktop
@@ -36,26 +37,49 @@ export default function Events() {
         };
     }, []);
 
-    let bevyCall: BevyModel = {
-        chapterId: 311,
-        page_size: page.pageSize,
-        status: 'Completed',
-        include_cohosted_events: true,
-        visible_on_parent_chapter_only: true,
-        order: '-start_date',
-        fields: [
-            'title',
-            'start_date',
-            'event_type_title',
-            'cropped_picture_url',
-            'cropped_banner_url',
-            'url',
-            'cohost_registration_url',
-            'description',
-            'description_short',
-        ] as const,
-        pageNo: page.pageNo ? page.pageNo : 1
-    };
+    let bevyCall: BevyModel[] = [
+        {
+            chapterId: 311,
+            page_size: page.pageSize,
+            status: 'Completed',
+            include_cohosted_events: true,
+            visible_on_parent_chapter_only: true,
+            order: '-start_date',
+            fields: [
+                'title',
+                'start_date',
+                'event_type_title',
+                'cropped_picture_url',
+                'cropped_banner_url',
+                'url',
+                'cohost_registration_url',
+                'description',
+                'description_short',
+            ] as const,
+            pageNo: page.pageNo ? page.pageNo : 1
+        },
+        {
+            chapterId: 311,
+            page_size: page.pageSize,
+            status: 'Live',
+            include_cohosted_events: true,
+            visible_on_parent_chapter_only: true,
+            order: '-start_date',
+            fields: [
+                'title',
+                'start_date',
+                'event_type_title',
+                'cropped_picture_url',
+                'cropped_banner_url',
+                'url',
+                'cohost_registration_url',
+                'description',
+                'description_short',
+            ] as const,
+            pageNo: page.pageNo ? page.pageNo : 1
+        }
+    ]
+
     useEffect(() => {
         if (!showMoreToggle) {
             setShowMoreEvents([])
@@ -64,14 +88,17 @@ export default function Events() {
     }, [showMoreToggle])
     useEffect(() => {
         async function fetchEvents() {
-            const response = await FetchBevyData(bevyCall);
-            console.log(response.results)
+            const response1 = await FetchBevyData(bevyCall[0]);
+            const response2 = await FetchBevyData(bevyCall[1]);
+
+            const res = await Promise.all([response1, response2])
             if (page.pageNo < 1) {
-                setEventsResult([...response.results]);
+                setEventsResult([...res[0].results]);
+                setUpcomingEventsResult([...res[1].results]);
                 // setShowMoreEvents([...eventResult])
             }
             else
-                setShowMoreEvents([...showMoreEvents, ...response.results])
+                setShowMoreEvents([...showMoreEvents, ...res[0].results])
         }
         fetchEvents();
         console.log(page)
@@ -87,45 +114,82 @@ export default function Events() {
         className: " items-center flex justify-center"
     };
     return (
-        <section className="flex flex-col w-full local-container gap-6 p-4" id="events">
-            <SectionHeader title1={EventsData.title_1} title_color={EventsData.title_color} title3={EventsData.title_3} description={EventsData.description} color={EventsData.color} />
-            {
-                showMoreToggle && showMoreEvents.length > 0 &&
-                <Modal onClose={setPage} setEventsResult={setShowMoreEvents} setOpen={setShowMoreToggle} isOpen={showMoreToggle} title="Events">
-                    <div className="grid gap-y-4 md:gap-0  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                        {showMoreEvents.map((data: Record<typeof bevyCall.fields[number], string>, key) => {
-                            return (
-                                <div key={key} className="p-2">
-                                    <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/<\/?[^>]+>/g, '').replace(/'RSVP.*'/, '').substring(0, 300) + "..."} />
-                                </div>
-                            )
-                        })}
-                    </div>
-                    <button onClick={() => {
-                        setPage({ ...page, pageNo: page.pageNo + 1, pageSize: 9 })
-                    }} className="py-2 text-google-blue text-center w-full">Load more &#8594;</button>
-                </Modal>
-            }
-            {
-                eventResult.length > 0 &&
-                <Slider {...settings}>
-                    {
-                        eventResult.map((data: Record<typeof bevyCall.fields[number], string>, key) => {
-                            return (
-                                <div key={key} className="px-6">
-                                    <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/^<[^>]*>/, '').replace(/'RSVP.*'/, '').substring(0, 200) + "..."} />
-                                </div>
-                            )
-                        })
-                    }
-                </Slider>
-            }
-            <button onClick={() => {
-                setShowMoreToggle(true)
-                setPage({ ...page, pageNo: page.pageNo + 1, pageSize: 9 })
-                console.log(page)
-            }} className="py-2 text-google-blue">See more past events &#8594;</button>
-        </section >
+        <>
+            <section className="flex flex-col w-full local-container gap-6 p-4" id="events">
+                <SectionHeader title1={EventsData[0].title_1} title_color={EventsData[0].title_color} title3={EventsData[0].title_3} description={EventsData[0].description} color={EventsData[0].color} />
+                {
+                    showMoreToggle && showMoreEvents.length > 0 &&
+                    <Modal onClose={setPage} setEventsResult={setShowMoreEvents} setOpen={setShowMoreToggle} isOpen={showMoreToggle} title="Events">
+                        <div className="grid gap-y-4 md:gap-0  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {showMoreEvents.map((data: Record<string, string>, key) => {
+                                return (
+                                    <div key={key} className="p-2">
+                                        <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/<\/?[^>]+>/g, '').replace(/'RSVP.*'/, '').substring(0, 300) + "..."} />
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <button onClick={() => {
+                            setPage({ ...page, pageNo: page.pageNo + 1, pageSize: 9 })
+                        }} className="py-2 text-google-blue text-center w-full">Load more &#8594;</button>
+                    </Modal>
+                }
+                {
+                    eventResult.length > 0 &&
+                    <Slider {...settings}>
+                        {
+                            eventResult.map((data: Record<string, string>, key) => {
+                                return (
+                                    <div key={key} className="px-6">
+                                        <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/^<[^>]*>/, '').replace(/'RSVP.*'/, '').substring(0, 200) + "..."} />
+                                    </div>
+                                )
+                            })
+                        }
+                    </Slider>
+                }
+                <button onClick={() => {
+                    setShowMoreToggle(true)
+                    setPage({ ...page, pageNo: page.pageNo + 1, pageSize: 9 })
+                    console.log(page)
+                }} className="py-2 text-google-blue">See more past events &#8594;</button>
+            </section >
+            <section className="flex flex-col w-full local-container gap-6 p-4" id="events">
+                <SectionHeader title1={EventsData[1].title_1} title_color={EventsData[1].title_color} title3={EventsData[1].title_3} description={EventsData[1].description} color={EventsData[1].color} />
+                {
+                    showMoreToggle && showMoreEvents.length > 0 &&
+                    <Modal onClose={setPage} setEventsResult={setShowMoreEvents} setOpen={setShowMoreToggle} isOpen={showMoreToggle} title="Events">
+                        <div className="grid gap-y-4 md:gap-0  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                            {showMoreEvents.map((data: Record<string, string>, key) => {
+                                return (
+                                    <div key={key} className="p-2">
+                                        <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/<\/?[^>]+>/g, '').replace(/'RSVP.*'/, '').substring(0, 300) + "..."} />
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <button onClick={() => {
+                            setPage({ ...page, pageNo: page.pageNo + 1, pageSize: 9 })
+                        }} className="py-2 text-google-blue text-center w-full">Load more &#8594;</button>
+                    </Modal>
+                }
+                {
+                    upcomingEvent.length > 0 &&
+                    <Slider {...settings}>
+                        {
+                            upcomingEvent.map((data: Record<string, string>, key) => {
+                                return (
+                                    <div key={key} className="px-6">
+                                        <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/^<[^>]*>/, '').replace(/'RSVP.*'/, '').substring(0, 200) + "..."} />
+                                    </div>
+                                )
+                            })
+                        }
+                    </Slider>
+                }
+            </section >
+        </>
+
     )
 }
 
@@ -133,7 +197,7 @@ function EventCard({ eventData, imageUrl, title, description }: any) {
     return <div className="w-full border border-gray-400 rounded-lg h-96 flex flex-col flex-1">
         <LazyImage height="100px" lazy={true} src={imageUrl} alt={""} className="relative flex items-center px-1 justify-center rounded-t-lg border-b" />
         <div className="flex flex-col items-start flex-1 px-4 justify-between py-2 gap-y-3">
-            <h4 className="text-left font-medium text-google-blue">{title}</h4>
+            <h4 className="text-left font-medium text-google-blue">{String.raw`${title}`}</h4>
             <p dangerouslySetInnerHTML={{ __html: description }} className=" text-gray-500 text-clip text-sm"></p>
             <a href={eventData?.url} target="_blank" className="py-3 text-google-blue">See event details &#8594;</a>
         </div>
