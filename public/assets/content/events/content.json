@@ -1,7 +1,18 @@
-{
-    "title_1":"Events",
-    "title_color":"Conducted",
-    "title_3":"",
-    "color":"googleYellow",
-    "description":"The place for cloud developers and architects to come together to learn, discuss and explore the latest advances in cloud technologies."
-}   
+[
+    {
+        "title_1": "Upcoming",
+        "title_color": "Events",
+        "title_3": "",
+        "type": "upcoming",
+        "color": "googleRed",
+        "description": "Checkout the events which are live and apply for them at the earliest"
+    },
+    {
+        "title_1": "Events",
+        "title_color": "Conducted",
+        "title_3": "",
+        "type": "completed",
+        "color": "googleYellow",
+        "description": "Events we have conducted so far ..."
+    }
+]
