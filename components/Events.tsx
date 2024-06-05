@@ -135,7 +135,7 @@ export default function Events() {
         slidesToShow: slidesToShow,
         lazyload: true,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         pauseOnHover: true,
         className: " items-center flex justify-center"
@@ -162,7 +162,7 @@ export default function Events() {
                     </Modal>
                 }
                 {
-                    upcomingEventResult.length > 0 &&
+                    upcomingEventResult.length > 2 ?
                     <Slider {...settings}>
                         {
                             upcomingEventResult.map((data: Record<string, string>, key) => {
@@ -173,7 +173,10 @@ export default function Events() {
                                 )
                             })
                         }
-                    </Slider>
+                    </Slider> :
+                    <div className="flex md:flex-row flex-col gap-4 items-center justify-center">
+                        <EventCardMapper eventResult={upcomingEventResult} />
+                    </div>
                 }
                 <button onClick={() => {
                     setShowMoreUpcomingToggle(true)
@@ -236,4 +239,18 @@ function EventCard({ eventData, imageUrl, title, description }: any) {
             <a href={eventData?.url} target="_blank" className="py-3 text-google-blue">See Event Details &#8594;</a>
         </div>
     </div>
+}
+
+function EventCardMapper({eventResult}: any) {
+    return <>
+    {
+        eventResult.map((data: Record<string, string>, key: number) => {
+            return (
+                <div key={key} className="px-6 md:w-4/12 w-full">
+                    <EventCard eventData={data} imageUrl={data.cropped_banner_url} title={data.title} description={data.description.replace(/^<[^>]*>/, '').replace(/'RSVP.*'/, '').substring(0, 200) + "..."} />
+                </div>
+            )
+        })
+    }
+    </>
 }
