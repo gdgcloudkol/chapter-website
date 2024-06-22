@@ -16,3 +16,10 @@ export interface ILazyImgPropsTypes {
     className?: string;
     lazy?: boolean;
 }
+
+export interface Gallery {
+    id: string;
+    title: string;
+    albumLink: string;
+    coverLink: string
+}
