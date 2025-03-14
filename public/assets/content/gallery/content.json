@@ -1,15 +1,27 @@
 [
   {
-    "id": "ccd2024_polygon",
-    "title": "GCCD Kolkata x Polygon Kolkata",
-    "albumLink": "ionaAZQN1K1A85Bb8",
-    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczMm0Nkb84F3mbeYS-dElOguoYqRUIkVVIbfBs_g0hRlc8tc-bRYmAs5VQiQSVPn_vydfMA6YQ5Q9mPd2Vp7tglqcvNg5F6UbDNbrhYB4ErzJAXVauk=w1080-h1080"
+    "id": "gdgck_iwd25",
+    "title": "GDGCK x IWD25",
+    "albumLink": "5g4cEAfaRV6RK6XGA",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczOgmXbmWIaZdod7lgFC4XcdXsI2zTvWq8Zl73jR1Z0Mxd_iZ45ppnL6OyeLqmY5ZwLtX-N2e4d-DciQmsgkQm4CWpNB4EKPqRzXcmgZgzFZgA3vBdGo8jLX1xoHvVqX4NFUKwmW7TZXA3yOc9QDQWcGGQ=w1695-h1271"
   },
   {
-    "id": "ccd2024_flutterkol",
-    "title": "GCCD Kolkata x Flutter Kolkata",
-    "albumLink": "FEgz8kUWghyeGD5K7",
-    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczNDUJW3GM69F3VYfcnXsIaSXDZsFJANxOmse1f7uwv0lBysiG8nhDnc4ZPPe62ou2li9OPr_BUVr5OMlmtfmroh8zdwAqXKioni3AiYwqsHx1856QSL=w1080-h1080"
+    "id": "cloud_devfest",
+    "title": "Cloud @ DevFest",
+    "albumLink": "VdbfDJsddpPv2yJX7",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczPGm7pjytdlDv1TfsWMC0dAguDbrBCszGrx1hdpLfzW7gq84pd872MIzVjtujP_uGRDvN6YZmXBhLtuZ0i-6iRwj7UkO-2Tp97lJQujkrfkZKlEGUTdbHNRwWgDJnZqY57YZJt6ZL8s3BT7ztM0Y_qL=w1906-h1271"
+  },
+  {
+    "id": "ccd2024_official",
+    "title": "GCCD Kolkata 2024",
+    "albumLink": "qJsgfvTcwVjVmgZN8",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczPbSmlrXBqJHnehKYstp1EbAi_eWFE0bGV7mgM8KYFmR6ml7LMnCWeNa24l1hA6tTMb2cWlAw4mwzBxK35Bn62VRRJOJzofky1rTdVXWBXTvjVb2auIc4JFi5D7zO7ZZcJYRQ-jTG3Mso7lakjjlTbO=w1906-h1271"
+  },
+  {
+    "id": "ccd2024_gdscfiem",
+    "title": "GCCD Kolkata x GDSC FIEM",
+    "albumLink": "de9Sn7suoD3BTXn58",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczP-5YZzlIftGfyB2KSRVvJVzTye1ZoEqDk-EaXkeoNu5LUn-_sGeulT45aVuEwTOFicwZIF1tCRasF3HhfPOYYfZo-mFrQ-3E9W0kqMyBW9fpYj-BIAzHvt2QzQhcsYOf9nhFo-JnX7IaQWjCdaYcbb=w1080-h1080"
   },
   {
     "id": "ccd2024_gdscnsec",
@@ -24,9 +36,51 @@
     "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczM8pM8rw9OSJBrL5SG8yiBJ5U3ra5okhBhi4mF4RApRSJS4lZTvRWluW9CbLiiFSv1QkPk0GBab2mMHdQNGU88m2vorz4AXp_FkRwgGeFCVB2b8drI=w1080-h1080"
   },
   {
-    "id": "ccd2024_gdscfiem",
-    "title": "GCCD Kolkata x GDSC FIEM",
-    "albumLink": "de9Sn7suoD3BTXn58",
-    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczP-5YZzlIftGfyB2KSRVvJVzTye1ZoEqDk-EaXkeoNu5LUn-_sGeulT45aVuEwTOFicwZIF1tCRasF3HhfPOYYfZo-mFrQ-3E9W0kqMyBW9fpYj-BIAzHvt2QzQhcsYOf9nhFo-JnX7IaQWjCdaYcbb=w1080-h1080"
-  }
+    "id": "ccd2024_flutterkol",
+    "title": "GCCD Kolkata x Flutter Kolkata",
+    "albumLink": "FEgz8kUWghyeGD5K7",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczOvbOBiL7Dg-LwGLPOzObFYDthmqIMpqso0FCHbASP_p9uvHPWlSGaxXYfsXt6okUQAFaYBFlYZzRnE_zKepN-y1v-0foaW19BgCvI4hBoNGQsh6e7Bthsrd6xlOD1_JiqDrqkJIOY84-mFzohvxcGH=w1695-h1271"
+  },
+  {
+    "id": "ccd2024_polygon",
+    "title": "GCCD Kolkata x Polygon Kolkata",
+    "albumLink": "ionaAZQN1K1A85Bb8",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczMm0Nkb84F3mbeYS-dElOguoYqRUIkVVIbfBs_g0hRlc8tc-bRYmAs5VQiQSVPn_vydfMA6YQ5Q9mPd2Vp7tglqcvNg5F6UbDNbrhYB4ErzJAXVauk=w1080-h1080"
+  },
+  {
+    "id": "ccd2024_tfugkol",
+    "title": "GCCD Kolkata x TFUG Kolkata",
+    "albumLink": "XCjAVSQQCohvgW9c7",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczP7ZpHAQg0F6Fv_JnpPcQ-dsFLDg6vCJbmwGFZ8ojHu6YmN6X7TksystAuC-BTRzWR7_qGTR8W7xhb6PiuUC-dkHlkgQC2WLRwU3JAg7amLSYh4RCX5N332biQvK9vR9Gmv9PiOg0YVmGV8e2oP9Kai=w1391-h1043"
+  },
+  {
+    "id": "ccd2024_tfugkol",
+    "title": "GCCD Kolkata x TFUG Kolkata",
+    "albumLink": "XCjAVSQQCohvgW9c7",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczP7ZpHAQg0F6Fv_JnpPcQ-dsFLDg6vCJbmwGFZ8ojHu6YmN6X7TksystAuC-BTRzWR7_qGTR8W7xhb6PiuUC-dkHlkgQC2WLRwU3JAg7amLSYh4RCX5N332biQvK9vR9Gmv9PiOg0YVmGV8e2oP9Kai=w1391-h1043"
+  },
+  {
+    "id": "ccd2024_h4b",
+    "title": "GCCD Kolkata x Hack4Bengal",
+    "albumLink": "Eo4eeQURSQd3LkM39",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczO3AYQ7Jao70W8rbUQ4SsC7auXosObzOecvXZeBGKxe2t79VHQT4ddUsXcO7QOSyXPY5VibFc_tDkS71OFDxinZmmZM2QaWuZh4sGnXFPjHHMQQYlG2bffKWJzlGgaPr8K11p-5qep5t5pFCsOaTNqz=w1391-h927"
+  },
+  {
+    "id": "ccd2024_tmsl",
+    "title": "GCCD Kolkata x Samarth TMSL",
+    "albumLink": "uyKg7CLNmrYM88nU8",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczO5gD4O1FQXc7hlcoBBD5lyTmv97KlD7Dz4gore7v53IuTeFhS5CwYrXiFz7uHLDGPitDK3-NcNN3Pfjr5cHfdnyCijvEHOtjPhwBPHhio59Q4-N8mf3as47nbM8B1Zo62VPsKnZ_cmdgUnElGthKO_=w1391-h1043"
+  },
+  {
+    "id": "ccd2024_gdscmsit",
+    "title": "GCCD Kolkata x GDSC MSIT",
+    "albumLink": "RydcBajC8gLQBKki9",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczP3djqbOPZGRwfsaDHjwFB0x_oPZnm2JCYTRcyeTThf-sToRognNFeqDf_M7ZFyfC7juwBL4_0fIIBqkhdAr4AipkAsZdQTAj-MQaSSqfsqHokILEunZ64zfqI0E1E0JC0WWHCWYb-9yDscVKvMtoGN=w1391-h783"
+  },
+  {
+    "id": "ccd2024_gdgsiliguri",
+    "title": "GCCD Kolkata x GDG Siliguri",
+    "albumLink": "LzgwSa8WEhNuzM5n6",
+    "coverLink": "https://lh3.googleusercontent.com/pw/AP1GczN_qKsIRIFaIW8yHcgADL3Tmc047KIZsH4jerC2gRtR3jaPjusjXSNHcAra6_WFjPho54yJg1QH-jAG78F1c1MxhoC7l2oz2Ej_rC7y6xuauRYq_hVmGoNylLlOtNIfs_N28Vup1SjhHQrTfxL1ac3t=w1152-h648"
+  },
 ]
